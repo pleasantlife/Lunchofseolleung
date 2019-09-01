@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "688447576894",
+    "firebase_url": "https://lunchofseollueng.firebaseio.com",
+    "project_id": "lunchofseollueng",
+    "storage_bucket": "lunchofseollueng.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688447576894:android:dbe74c35b44dcf86",
+        "android_client_info": {
+          "package_name": "com.gandan.lunchofseolleung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688447576894-d5m25nqgbdki911tpekj485mbqvtilh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3TIN_xjiQE7G9V8l8yrnjxOrmlOPcaQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688447576894-d5m25nqgbdki911tpekj485mbqvtilh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LunchOfSeolleung</string>
+    <string name="menu_text_test">흰쌀밥\n제육볶음\n두부부침\n아욱된장국\n계란말이\n콩나물무침\n요구르트</string>
+    <string name="price_text_test">현금 : 5,000원\n카드 : 5,500원</string>
+</resources>
