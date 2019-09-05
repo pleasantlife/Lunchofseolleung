@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp">
+    
+    
+<LinearLayout
               android:id="@+id/storeItemLinear"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginBottom="16dp">
+              android:layout_height="wrap_content">
     
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical"
-    android:layout_weight="3">
+    android:layout_weight="2">
         
         <ImageView
                 android:id="@+id/storeItemImageView"
@@ -17,7 +25,8 @@
                 android:layout_height="match_parent"
                 android:padding="4dp"
                 android:src="@drawable/ic_launcher_background"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+        android:transitionName="storeMainImage"/>
         
         <TextView
                 android:id="@+id/storeItemPriceTxtView"
@@ -29,7 +38,6 @@
         
         
     </LinearLayout>
-    
     
     
     
@@ -45,11 +53,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="유정삼겹"
+                android:text="식당이름"
+                android:textColor="#000000"
         android:textSize="16dp"/>
         
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="오늘의 점심 메뉴"/>
+        android:text="오늘의 점심 메뉴"
+        android:layout_marginBottom="8dp"/>
         
         <TextView
                 android:id="@+id/storeItemMenuTxtView"
@@ -59,3 +69,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</androidx.cardview.widget.CardView>
