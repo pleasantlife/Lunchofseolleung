@@ -13,7 +13,8 @@
         android:layout_height="match_parent"
         android:background="#ffffff"
         android:orientation="vertical"
-        tools:context=".StoreDetailActivity">
+        tools:context=".StoreDetailActivity"
+        android:nestedScrollingEnabled="false">
     
     <ImageView
             android:layout_width="match_parent"
@@ -25,12 +26,48 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:src="@mipmap/ic_launcher_round"/>
     
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="상세정보"
+              android:layout_marginTop="16dp"
+              android:padding="8dp"
+              android:layout_marginLeft="8dp"
+              android:layout_marginRight="8dp"
+    />
+    
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginLeft="16dp"
+                  android:layout_marginRight="16dp"
+                  android:layout_marginTop="8dp"
+    >
+        
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:text="영업시간"/>
+        
+        
+    </LinearLayout>
+    
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:text="가게 위치"
+    />
+    
     <fragment
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="16dp"
             android:id="@+id/storeMapFragment"
             android:name="com.naver.maps.map.MapFragment"
+            app:navermap_tiltGesturesEnabled="true"
+            app:navermap_scrollGesturesEnabled="true"
             app:layout_constraintTop_toBottomOf="@+id/storeImageView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

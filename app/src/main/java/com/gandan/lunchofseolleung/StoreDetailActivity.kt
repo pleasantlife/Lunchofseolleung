@@ -1,14 +1,19 @@
 package com.gandan.lunchofseolleung
 
+import android.graphics.PointF
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.FirebaseFirestore
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
+import com.naver.maps.map.CameraUpdate.REASON_GESTURE
 import com.naver.maps.map.overlay.Marker
+
+
 
 class StoreDetailActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -37,18 +42,31 @@ class StoreDetailActivity : AppCompatActivity(), OnMapReadyCallback {
                 }
             }
 
+        storeMapFragment.setOnTouchListener { view, event ->
 
+            view.parent.requestDisallowInterceptTouchEvent(true)
+            when (event.action and MotionEvent.ACTION_MASK) {
+                MotionEvent.ACTION_SCROLL -> {
+                    view.parent.requestDisallowInterceptTouchEvent(false)
+                    true
+                }
+            }
+            false
+        }
     }
 
     override fun onMapReady(naverMap: NaverMap) {
         this.naverMap = naverMap
         naverMap.let {
             it.moveCamera(CameraUpdate.scrollTo(LatLng(lat, lng)))
+
         }
         val marker = Marker()
         marker.let {
             it.position = LatLng(lat, lng)
             it.map = naverMap
         }
+        val uiSettings = naverMap.uiSettings
+        uiSettings.isCompassEnabled = true
     }
 }
